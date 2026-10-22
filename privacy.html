@@ -30,11 +30,11 @@
     <h2>Local network information</h2>
     <p>During discovery and pairing, the app may read a television’s local IP address, device name, model, and hardware address. Discovery results and the selected television details stay on this iPhone. Remote commands are sent over the local network to the selected television.</p>
     <h2>Connections and command security</h2>
-    <p>TV Remote sends commands only to the television you select on your local Wi-Fi. Samsung TVs use an encrypted connection when supported. Some compatible Samsung models may require an older, unencrypted local remote connection. The legacy LG NetCast and Philips JointSPACE v1 protocols also use unencrypted local HTTP. Use these connections only on a trusted private Wi-Fi network.</p>
+    <p>TV Remote sends commands only to the television you select on your local Wi-Fi. Samsung TVs use an encrypted connection when supported. Some compatible Samsung models may require an older, unencrypted local remote connection. LG webOS uses encrypted local connections with TV certificate verification. Android TV uses mutual TLS with a per-TV iPhone identity and a TV certificate pinned after code pairing. Fire TV uses PIN pairing over HTTPS with certificate verification and a token saved in iOS Keychain. A local HTTP DIAL request starts its remote receiver without sending a pairing token. Legacy LG NetCast, Philips JointSPACE v1, Sony BRAVIA IP control (including its pre-shared key), and older Panasonic VIERA use unencrypted local HTTP. Use these connections only on a trusted private Wi-Fi network.</p>
     <h2>Keyboard text</h2>
-    <p>Text entered in the app is sent only after the user presses Send, only to the selected television, and only over an encrypted Samsung connection. Text entry is disabled on unencrypted connections. The app does not receive confirmation of what the television displayed or did with the text. Apple keyboard and dictation features follow the user’s iPhone settings and Apple’s privacy terms.</p>
+    <p>Keyboard text is visible while typing and hidden when the app is inactive. The app does not automatically read the clipboard or save keyboard drafts. Text entered in the app is sent only after the user presses Send, only to the selected television, and only over an encrypted Samsung connection. Text entry is disabled on unencrypted connections. The app does not receive confirmation of what the television displayed or did with the text. Apple keyboard and dictation features follow the user’s iPhone settings and Apple’s privacy terms.</p>
     <h2>On-device storage and deletion</h2>
-    <p>TV details and app preferences are stored on the iPhone. Pairing credentials and the trusted television certificate fingerprint are kept in the iOS Keychain and are not sent to the developer. To delete a saved TV and its pairing credentials, open Settings → Manage TVs → Forget TV.</p>
+    <p>TV details and app preferences are stored on the iPhone. Pairing credentials and the trusted television certificate fingerprint are kept in the iOS Keychain and are not sent to the developer. To delete a saved TV and its pairing credentials, tap the TV selector at the top of Remote, then Forget TV.</p>
     <h2>Tracking, analytics, and sharing in the app</h2>
     <p>TV Remote includes no advertising, analytics, tracking, account, or developer-server SDKs. The developer does not collect or sell personal information. The app does not share your local-network information with the developer.</p>
     <h2>Website hosting</h2>
@@ -45,4 +45,3 @@
 </main>
 </body>
 </html>
-
